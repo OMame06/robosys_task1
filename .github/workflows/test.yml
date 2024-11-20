@@ -3,7 +3,10 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+      python-version: ["3.7", "3.8"]
     steps:
     - uses: actions/checkout@v3
     - name: All test
-      run: bash -xv ./task1
+      run: py -xv ./task1
