@@ -1,0 +1,9 @@
+name: taskts
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: All taskts
+      run: bash -xv ./test.bash
