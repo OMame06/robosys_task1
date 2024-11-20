@@ -1,4 +1,4 @@
-name: taskts
+name: test
 on: push
 jobs:
   test:
