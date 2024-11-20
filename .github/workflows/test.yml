@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: All test
-      run: py -xv ./task1
+      run: bash -xv ./task1
