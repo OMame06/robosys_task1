@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: All test
-      run: bash -xv ./taskts.bash
+      run: bash -xv ./test.bash
