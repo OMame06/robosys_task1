@@ -1,0 +1,82 @@
+#!/usr/bin/python3
+
+import tkinter as tk
+import random
+import sys
+
+#メインの窓
+root = tk.Tk()
+root.title("Window Game")
+root.geometry("1000x1000+0+0")
+
+#レベル取得
+level = int(sys.stdin.read().strip())
+click = 1
+
+# 画面サイズ取得
+max_width  = root.winfo_screenwidth()
+max_height = root.winfo_screenheight()
+width  = max_width -1000
+height = max_height -1000
+
+middle_width  = max_width / 2
+middle_height = max_height / 2
+#窓を配列に
+all_windows = []
+
+#サブ窓
+def push():
+    global click
+    global root
+
+    if click < level:
+       click += 1
+#テスト
+       print("true")
+#窓ランダム
+       sab = tk.Toplevel(root)
+       sab.title("Window Game")
+
+       rw = random.randint(0, width)
+       rh = random.randint(0, height)
+       sab.geometry(f"1000x1000+{rw}+{rh}")
+       sab.protocol("WM_DELETE_WINDOW", clouse)
+
+       all_windows.append(sab)
+#押した回数分ボタン
+       for i in range(click):
+
+           button = tk.Button(sab, text ="click!", command = push)
+           button.config(width =10, height =3)
+           bx = random.randint(0, 950)
+           by = random.randint(0, 950)
+           button.place(x =bx, y =by)
+    else:
+      close_all_windows()
+
+#全ての窓を消す
+def close_all_windows():
+    global all_windows
+    for window in all_windows:
+        window.destroy()
+    all_windows.clear()
+
+    if root.winfo_exists():
+       root.quit()
+       root.destroy()
+
+
+def clouse():
+    global level
+    level += 1
+    push()
+
+
+#スタートボタン
+button = tk.Button(root, text ="click!", command = push)
+button.place(x =495, y =500)
+button.config(width =10, height =3)
+
+root.protocol("WM_DELETE_WINDOW", clouse)
+#窓を持続して表示
+root.mainloop()
