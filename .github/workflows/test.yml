@@ -11,4 +11,4 @@ jobs:
     - name: All test
       run: sudo apt-get update
            sudo apt-get install python3-tk
-           python3 ./pesky_windows
+           bash -xv ./pesky_windows
