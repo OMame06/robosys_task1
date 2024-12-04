@@ -5,6 +5,8 @@ import random
 import sys
 import time
 
+#やり直す!!!
+
 #窓の初期設定
 root = tk.Tk()
 root.title("Window Game")
@@ -47,7 +49,7 @@ def pushed():
     pass
     if level >= 50:
        pass
-#ダミー押したら即終了
+#ダミー押したら終了
  if gameover == 1:
     pass
  level += 1
@@ -57,13 +59,20 @@ def pushed():
  button.config(text =int(level))
 
 
+def timer():
+ global count
+ count += 1
+ min, sec = divmod(count, 60)
+ count.config(text =f"{min}:{sec}")
+ count.after(1000, timer)
+
+
 #スタートボタン(中央に揃えたい)
 button = tk.Button(root, text ="start!!", command = pushed)
 button.place(x =500, y=500)
 button.config(width =15, height =3)
 #画面内にタイマーぶち込み隊
-#for i in range(30, 0, -1):
-#      print(f'{i}秒')
-#      time.sleep(1)
+
+
 #窓を持続して表示
 root.mainloop()
