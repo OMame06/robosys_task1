@@ -9,6 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: All test
-      run: sudo apt-get update
-           sudo apt-get install python3-tk
-           bash -xv ./pesky_windows
+      run: bash -xv ./pesky_windows
