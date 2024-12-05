@@ -13,7 +13,7 @@ $ sudo apt-get install python3-tk
 $ git clone https://github.com/OMame06/windows_trick.git
 ```
 ```
-$ cd robosys_task1
+$ cd windows_trick
 ```
 ```
 $ echo <number>| ./pesky_windows
