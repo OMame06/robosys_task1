@@ -1,4 +1,4 @@
-# __windows_trick_
+# _windows_trick_
 [![test](https://github.com/OMame06/windows_trick/actions/workflows/test.yml/badge.svg)](https://github.com/OMame06/windows_trick/actions/workflows/test.yml)
 
 ## プログラムの目的
