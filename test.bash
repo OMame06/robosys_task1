@@ -4,29 +4,31 @@
 
 ng () {
        echo ${1}行目の入力に問題あり
-
+       res=1
 }
 
-out=$(echo 3| ./pesky_windows)
+res=0
+echo 3| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
 
-out=$(echo -3| ./pesky_windows)
+echo -3| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
 
-out=$(echo  0| ./pesky_windows)
+echo  0| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
 
-out=$(echo 100| ./pesky_windows)
+echo 100| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
 
-out=$(echo 5.8| ./pesky_windows)
+echo 5.8| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
 
-out=$(echo ABC| ./pesky_windows)
+echo ABC| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
+exit $res
