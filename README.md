@@ -10,7 +10,13 @@ $ sudo apt-get install python3-tk
 ```
 プログラムの実行に伴い，プログラム終了に必要なボタンのクリック数も入力します．必ず正の整数を使用して下さい．
 ```
-$echo <number>| ./pesky_windows
+$ git clone https://github.com/OMame06/windows_trick.git
+```
+```
+$ cd robosys_task1
+```
+```
+$ echo <number>| ./pesky_windows
 ```
 
 ## プログラム概要
