@@ -4,10 +4,8 @@
 
 ng () {
        echo ${1}行目の入力に問題あり
-       res=1
 }
 
-res=0
 echo 3| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
@@ -31,6 +29,3 @@ echo 5.8| ./pesky_windows
 echo ABC| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
-
-res=0
-exit $res
