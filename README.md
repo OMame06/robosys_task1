@@ -1,5 +1,6 @@
-# __windows_trick__
+# __windows_trick_
 [![test](https://github.com/OMame06/windows_trick/actions/workflows/test.yml/badge.svg)](https://github.com/OMame06/windows_trick/actions/workflows/test.yml)
+
 ## プログラムの目的
 ウィンドウを活用したサプライズや，遊び心の演出に使用できます．また，このプログラムによって発生したトラブルについては一切の責任を負いません．自己責任でご利用ください．
 
