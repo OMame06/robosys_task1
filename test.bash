@@ -31,4 +31,6 @@ echo 5.8| ./pesky_windows
 echo ABC| ./pesky_windows
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
+
+res=0
 exit $res
