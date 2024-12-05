@@ -4,7 +4,7 @@ import tkinter as tk
 import random
 import sys
 
-#メインの窓
+#メインウィンドウ
 root = tk.Tk()
 root.title("Window Game")
 root.geometry("1000x1000+0+0")
@@ -27,10 +27,10 @@ height = max_height -1000
 
 middle_width  = max_width / 2
 middle_height = max_height / 2
-#窓を配列に
+#サブウィンドウを配列に
 all_windows = []
 
-#サブ窓
+#サブウィンドウ
 def push():
     global click
     global root
@@ -38,9 +38,9 @@ def push():
     if click < level:
        click += 1
 
-#窓ランダム
+
        sab = tk.Toplevel(root)
-       sab.title("Window Game")
+       sab.title("Junk window")
 
        rw = random.randint(0, width)
        rh = random.randint(0, height)
@@ -48,7 +48,7 @@ def push():
        sab.protocol("WM_DELETE_WINDOW", clouse)
 
        all_windows.append(sab)
-#押した回数分ボタン
+#押した回数ボタンが増える
        for i in range(click):
 
            button = tk.Button(sab, text ="click!", command = push)
@@ -59,7 +59,7 @@ def push():
     else:
       close_all_windows()
 
-#全ての窓を消す
+#全てのウィンドウ削除
 def close_all_windows():
     global all_windows
     for window in all_windows:
@@ -77,11 +77,11 @@ def clouse():
     push()
 
 
-#スタートボタン
+#最初のボタン
 button = tk.Button(root, text ="click!", command = push)
 button.place(x =495, y =500)
 button.config(width =10, height =3)
 
 root.protocol("WM_DELETE_WINDOW", clouse)
-#窓を持続して表示
+#継続して表示
 root.mainloop()
