@@ -4,6 +4,7 @@
 - Python
   - テスト済みバージョン: 3.7~3.11
  
+sudo apt-get install python3-tk
 
 
 ##テスト環境
