@@ -40,4 +40,4 @@ GitHub ActionsのUbuntu環境にはtkinterが含まれていません．よっ�
 ## ライセンス
 このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 
-© 2024 Kinjo Riku
+© 2024 Riku Kinjo
