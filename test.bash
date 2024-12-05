@@ -19,6 +19,10 @@ out=$(echo 100| ./pesky_windows)
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
 
+out=$(echo 5.8| ./pesky_windows)
+[ "$?" = 0 ] || ng $((LINENO - 1))
+[ "$?" = 0 ] && echo OK
+
 out=$(echo ABC| ./pesky_windows)
 [ "$?" = 0 ] || ng $((LINENO - 1))
 [ "$?" = 0 ] && echo OK
